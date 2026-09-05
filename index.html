@@ -2494,7 +2494,9 @@ html.scanner-mode #menuDrawer button{
     "https://script.google.com/macros/s/AKfycbyy2iF5OfTCJm0CTPQ3F9zpptZAD5CY5JhBhJRO8HVxf5zfZIGwfTNCe-1-duJt3OIu/exec";
 
   function bukaAdmin() {
-    window.open(GAS_URL + "?halaman=admin", "_blank");
+    try { localStorage.setItem("absensiHalamanAwal", window.location.href); } catch(e) {}
+    const kembali = encodeURIComponent(window.location.href);
+    window.open(GAS_URL + "?halaman=admin&kembali=" + kembali, "_blank");
   }
 
   function muatIdentitasSekolah() {
