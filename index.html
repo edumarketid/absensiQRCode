@@ -2059,6 +2059,10 @@ html.scanner-mode #menuDrawer button{
   #tindakLanjutPage .tindak-header{align-items:flex-start}
 }
 </style>
+
+<style id="creator-support-style">
+.creator-footer{margin:18px auto 24px;max-width:1200px;padding:14px 20px;text-align:center;color:#64748b;font-size:11px;line-height:1.6}.creator-footer strong{color:#334155}.support-btn{border:0;background:none;color:#0b3b82;font-weight:800;cursor:pointer;padding:2px 4px}.support-modal{display:none;position:fixed;inset:0;background:#0f172a88;z-index:99999;align-items:center;justify-content:center;padding:18px}.support-modal.show{display:flex}.support-box{width:min(430px,100%);background:#fff;border-radius:18px;padding:22px;box-shadow:0 20px 60px #0004;text-align:left}.support-box h3{margin:0 0 7px;color:#0b3b82}.support-box p{font-size:12px;line-height:1.6;color:#475569}.support-item{background:#f8fafc;border:1px solid #e2e8f0;border-radius:11px;padding:10px 12px;margin-top:9px}.support-item b{display:block;font-size:11px;color:#64748b;margin-bottom:3px}.support-item span{font-weight:800;color:#172033;word-break:break-word}.support-actions{text-align:right;margin-top:14px}.support-close{border:0;border-radius:9px;padding:9px 14px;background:#e2e8f0;color:#172033;font-weight:800;cursor:pointer}
+</style>
 </head>
 
 
@@ -2487,7 +2491,7 @@ html.scanner-mode #menuDrawer button{
   // =====================================================
 
   const GAS_URL =
-    "https://script.google.com/macros/s/AKfycbz9nMuMV9rPt-Ql6MipnrbtYSN5rOtrr0pCNHwSx3C4NNrDDjVF5RruHn913_xkKkIg/exec";
+    "https://script.google.com/macros/s/AKfycbxSXinXPPm7qIl_5J99eMKfsHEo-nCZ8MWI-KNt0KsnR4W7mTL-uE4dagGneVg3c_aX/exec";
 
   function bukaAdmin() {
     window.open(GAS_URL + "?halaman=admin", "_blank");
@@ -4363,6 +4367,20 @@ if (!petugas) {
 
 </script>
 
+
+
+<div class="creator-footer">Dibuat dan dibagikan untuk <strong>kemanfaatan bersama</strong> • © 2026 <strong>Ajiardin</strong> • <button class="support-btn" onclick="openSupportModal()">❤️ Dukung Pengembangan</button></div>
+<div class="support-modal" id="creatorSupportModal" onclick="if(event.target===this)closeSupportModal()">
+  <div class="support-box">
+    <h3>❤️ Dukung Pengembangan</h3>
+    <p>Aplikasi ini dibagikan untuk membantu digitalisasi sekolah. Jika aplikasi ini bermanfaat dan Anda ingin memberikan apresiasi atau mendukung pengembangannya, dukungan dapat diberikan secara sukarela.</p>
+    <div class="support-item"><b>Bank BRI</b><span>488801018509539</span><br><small>Ajiardin</small></div>
+    <div class="support-item"><b>E-Wallet</b><span>085298875399</span><br><small>DANA • OVO • GoPay • ShopeePay • KasPro</small></div>
+    <p style="font-size:10px;color:#94a3b8;margin-bottom:0">Tidak ada kewajiban untuk memberikan dukungan. Terima kasih sudah menggunakan dan ikut menyebarkan manfaat.</p>
+    <div class="support-actions"><button class="support-close" onclick="closeSupportModal()">Tutup</button></div>
+  </div>
+</div>
+<script>function openSupportModal(){var e=document.getElementById('creatorSupportModal');if(e)e.classList.add('show')}function closeSupportModal(){var e=document.getElementById('creatorSupportModal');if(e)e.classList.remove('show')}document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSupportModal()});</script>
 
 </body>
 
